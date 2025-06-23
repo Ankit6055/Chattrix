@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router";
 
-const Login = () => {
+const Login = (props) => {
+  const setIsLoggedIn = props.setIsLoggedIn;
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    // alert("handleLogin");
+    navigate("/");
+  };
+
   return (
-    <div>Login</div>
-  )
-}
+    <>
+      <h2>Login Page</h2>
+      <button onClick={handleLogin}>Login With Google</button>
+    </>
+  );
+};
 
-export default Login
+export default Login;
