@@ -1,8 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router'
 
 const Chat = () => {
+  const params = useParams();  
   return (
-    <div>Chat</div>
+    <div>Chat {params.uniqueId} </div>
   )
 }
 
